@@ -1,0 +1,5 @@
+#11538C azul escuro
+#115D8C azul marinho
+#F0F1F2 branco
+#05DBF2 azul claro
+#0396A6 ciano

@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     btnEntrar: {
         fontSize: 24,
         paddingHorizontal: 20,
-        fontWeight: 600,
+        fontWeight: "600",
         color: "#F0F1F2"
     }
 });

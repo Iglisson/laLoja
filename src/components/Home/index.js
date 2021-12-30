@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SafeAreaView, Text, TextInput, TouchableOpacity } from "react-native";
+import { SafeAreaView, Text, TextInput, TouchableOpacity, View } from "react-native";
 import styles from "./style.js"
 
 export default function Home({ navigation }) {

@@ -1,13 +1,17 @@
 import React from "react";
-import { SafeAreaView, Text } from "react-native";
+import { SafeAreaView, Text, View } from "react-native";
 import styles from "./style.js";
+import ProductList from "../ProductList"
 
 export default function Client({ route }) {
     return (
         <SafeAreaView style={styles.container}>
-            <View>
-                <Text>Cliente {route.params.client}</Text>
+
+            <View style={styles.headerClient}>
+                <Text style={styles.clientName}>Cliente {route.params.client}</Text>
             </View>
+
+            <ProductList/>
 
         </SafeAreaView>
     );
