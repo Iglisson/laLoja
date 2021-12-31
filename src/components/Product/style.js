@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
         margin: 8,
         flexDirection: "row",
         alignItems: "center",
+        justifyContent: "space-between",
         backgroundColor: "#FFF",
         borderRadius: 5,
         padding: 7,
@@ -27,7 +28,9 @@ const styles = StyleSheet.create({
         width: 150,
         height: 150
     },
-    description: {},
+    description: {
+        width: "auto"
+    },
     title: {
         fontSize: 20,
         fontWeight: "normal"
@@ -35,6 +38,18 @@ const styles = StyleSheet.create({
     price: {
         fontSize: 24,
         fontWeight: "bold" 
+    },
+    btn: {
+        alignSelf: "flex-end",
+        marginTop: 20,
+        backgroundColor: "#11538C",
+        padding: 10,
+        borderRadius: 10
+    },
+    btnText: {
+        fontSize: 16,
+        fontWeight: "bold",
+        color: "#F0F1F2"
     }
 });
 
