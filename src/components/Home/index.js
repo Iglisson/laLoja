@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { SafeAreaView, Text, TextInput, TouchableOpacity, View } from "react-native";
-import styles from "./style.js"
+import { SafeAreaView, Text, TextInput, TouchableOpacity } from "react-native";
+import styles from "./style.js";
 
 export default function Home({ navigation }) {
 
     const [name, setName] = useState("");
 
-    function userLogin() {
+    const login = () => {
         if (name !== "") {
-            return navigation.navigate("Client", {client: name })
+            navigation.navigate("Client", {client: name})
         } else {
             alert("Preencha o Nome do Cliente!")
         }
@@ -16,7 +16,6 @@ export default function Home({ navigation }) {
 
     return(
         <SafeAreaView style={styles.container}>
-            
             <TextInput
             style={styles.input}
             placeholder="Nome do Cliente"            
@@ -24,7 +23,7 @@ export default function Home({ navigation }) {
             onChangeText={ (v) => {setName(v)}}
             />
 
-            <TouchableOpacity style={styles.btnArea} onPress={userLogin}>
+            <TouchableOpacity style={styles.btnArea} onPress={login}>
                 <Text style={styles.btnEntrar}>Entrar</Text>
             </TouchableOpacity>
 

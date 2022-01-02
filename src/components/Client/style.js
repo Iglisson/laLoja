@@ -3,8 +3,9 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        flexShrink: 1,
-        alignItems: "center"
+        flexGrow: 1,
+        alignItems: "center",
+        backgroundColor: "#F0F1F2"
     },
     headerClient: {
         width: "90%",
@@ -18,6 +19,9 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: "500",
         color: "#F0F1F2"
+    },
+    listProducts: {
+        width: "90%"
     }
 });
 

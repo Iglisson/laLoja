@@ -4,7 +4,6 @@ const styles = StyleSheet.create({
     container:{
         flex: 1,
         margin: 8,
-        flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
         backgroundColor: "#FFF",
@@ -29,7 +28,10 @@ const styles = StyleSheet.create({
         height: 150
     },
     description: {
-        width: "auto"
+        width: "100%",
+        paddingHorizontal: 10,
+        backgroundColor: "#F0F1F2",
+        borderRadius: 10
     },
     title: {
         fontSize: 20,
@@ -39,18 +41,69 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: "bold" 
     },
-    btn: {
-        alignSelf: "flex-end",
-        marginTop: 20,
+    modal: {
+        width: "100%"
+    },
+    modalPortrait: {
+        width: "100%",
+        height: 400,
+        justifyContent: "center",
+        alignItems: "center",
+        borderBottomWidth: 3,
+        borderBottomColor: "#11538C",
+        marginBottom: 30,
+        borderRadius: 5
+    },
+    modalImage: {
+        width: 300,
+        height: 300
+    },
+    modalDescription: {
+        width: "100%",
+        alignContent: "flex-start",
+        paddingHorizontal: 5,
+        paddingVertical: 15,
+        backgroundColor: "#F0F1F2",
+        borderRadius: 15
+    },
+    modalTitle: {
+        fontSize: 30,
+        fontWeight: "normal"
+    },
+    modalPrice: {
+        fontSize: 34,
+        fontWeight: "bold" 
+    },
+    modalPag: {
+        fontSize: 22,
+        fontWeight: "normal" 
+    },
+    modalBtnArea: {
+        justifyContent: "space-between",
+        flexDirection: "row",
+        marginTop: 15
+    },
+    modalBtnClose: {
         backgroundColor: "#11538C",
-        padding: 10,
         borderRadius: 10
     },
-    btnText: {
-        fontSize: 16,
+    modalBtnReturnClose: {
+        fontSize: 24,
         fontWeight: "bold",
-        color: "#F0F1F2"
-    }
+        color: "#F0F1F2",
+        padding: 10
+    },
+    modalBtnReturn: {
+        alignSelf: "flex-end",
+        backgroundColor: "#11538C",
+        borderRadius: 10
+    },
+    modalBtnReturnText: {
+        fontSize: 24,
+        fontWeight: "bold",
+        color: "#F0F1F2",
+        padding: 10
+    },
 });
 
 export default styles;

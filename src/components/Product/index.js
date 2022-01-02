@@ -1,53 +1,74 @@
+import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
 import { Image, Modal, SafeAreaView, Text, TouchableOpacity, View } from "react-native";
 import styles from "./style.js";
-import * as Animatable from "react-native-animatable";
 
 export default function Product({ data }) {
 
     const [open, setOpen] = useState(false);
+    const navigation = useNavigation();
+
+    function exit() {
+        alert("Compra encerrada!");
+        navigation.navigate("Home");
+    }
 
     return (
         <View style={styles.container}>
 
             <View style={styles.portrait}>
-                <Image
-                    style={styles.image}
-                    resizeMode="center"
-                    source={require(`../../Images/Product/${data.img}`)}
-                    alt="imagem do produto"
-                />
+
+                <TouchableOpacity onPress={() => setOpen(true)}>
+                    <Image
+                        style={styles.image}
+                        resizeMode="center"
+                        source={{ uri: `${data.img}` }}
+                        alt="imagem do produto"
+                    />
+                </TouchableOpacity>
+
             </View>
 
             <View style={styles.description}>
                 <Text style={styles.title}>{data.title}</Text>
                 <Text style={styles.price}>R$ {data.price}</Text>
-
-                <TouchableOpacity
-                    style={styles.btn}
-                    onPress={() => setOpen(true)}
-                >
-                    <Text style={styles.btnText}>Detalhes</Text>
-                </TouchableOpacity>
             </View>
 
             <Modal animationType="slide" transparent={false} visible={open} >
                 <SafeAreaView style={styles.modal}>
-                    <View style={styles.portrait}>
+                    <View style={styles.modalPortrait}>
                         <Image
-                            style={styles.image}
+                            style={styles.modalImage}
                             resizeMode="center"
-                            source={require(`../../Images/Product/${data.img}`)}
+                            source={{ uri: `${data.img}` }}
                             alt="imagem do produto"
                         />
                     </View>
-                    <Text>{data.title}</Text>
-                    <Text>{data.price}</Text>
+                    <View style={styles.modalDescription}>
+                        <Text style={styles.modalTitle} >{data.title}</Text>
+                        <Text style={styles.modalPrice} >R$ {data.price} via PIX!</Text>
+                        <Text style={styles.modalPag} >ou de {data.pag} no cartão!</Text>
 
-                    <TouchableOpacity style={styles.closeModalBtn} onPress={() => setOpen(false)} >
-                        <Text style={styles.closeModalText} >Voltar</Text>
-                    </TouchableOpacity>
+                        <View style={styles.modalBtnArea}>
 
+                            <TouchableOpacity
+                                style={styles.modalBtnClose}
+                                onPress={() => exit()}
+                            >
+                                <Text style={styles.modalBtnReturnClose} >Encerrar Compra</Text>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity
+                                style={styles.modalBtnReturn}
+                                onPress={() => setOpen(false)}
+                            >
+                                <Text style={styles.modalBtnReturnText} >Voltar</Text>
+                            </TouchableOpacity>
+
+                        </View>
+
+                    </View>
+                    
                 </SafeAreaView>
             </Modal>
 
