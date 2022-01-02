@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "laLoja",
+    "name": "Hardware Shop",
     "slug": "laLoja",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,7 +8,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#F0F1F2"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -22,12 +22,12 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#F0F1F02"
       }
     },
     "androidStatusBar": {
       "barStyle": "light-content",
-      "backgroundColor": "#000"
+      "backgroundColor": "#11538C"
     },
     "web": {
       "favicon": "./assets/favicon.png"
